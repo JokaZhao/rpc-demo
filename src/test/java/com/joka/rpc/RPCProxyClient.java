@@ -1,5 +1,7 @@
 package com.joka.rpc;
 
+import com.joka.rpc.test.HelloService;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
@@ -35,7 +37,7 @@ public class RPCProxyClient implements InvocationHandler {
     public static class Test{
         public static void main(String[] args) {
             HelloService proxy = (HelloService) RPCProxyClient.getProxy(HelloService.class);
-            proxy.sayHello();
+            proxy.hello("zhaozengjie");
         }
     }
 }

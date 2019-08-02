@@ -16,6 +16,10 @@ public class ResponsePacket extends AbstractPacket{
     private String error;
     private Object result;
 
+    public boolean isError() {
+        return error != null;
+    }
+
     @Override
     public Byte getCommand() {
         return Command.RESPONSE.getCommand();

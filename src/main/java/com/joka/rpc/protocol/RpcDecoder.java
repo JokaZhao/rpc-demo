@@ -24,6 +24,7 @@ public class RpcDecoder extends ByteToMessageDecoder {
 
     @Override
     protected void decode(ChannelHandlerContext channelHandlerContext, ByteBuf in, List<Object> list) throws Exception {
+        System.out.println("service obtain message");
         if (in.readableBytes() < 4) {
             return;
         }
